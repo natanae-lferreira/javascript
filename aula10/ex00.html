@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        <p>interaja...</p>
+    </div>
+    <h1>Somano</h1>
+    <input type="number" name="n1" id="txt1">
+    <input type="number" name="n2" id="txt2">
+    <input type="button" value="Somar" onclick="soma()">
+    <div id="resultado">Resultado!</div>
+    <script> 
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        function soma() {
+            var n1 = Number(document.getElementById('txt1').value)
+            var n2 = Number(document.getElementById('txt2').value)
+            var s = n1 + n2
+            var r = document.getElementById('resultado')
+            r.innerText = `A soma entre ${n1} e ${n2} é ${s}`
+        }
+
+        function clicar() {
+            a.innerText = 'clicou!'
+            a.style.background = 'red'
+        }
+
+        function entrou() {
+            a.style.background = 'blue'
+        }
+
+        function saiu() {
+            a.style.background = 'green'
+            a.innerText = 'interaja...'
+        }
+    </script>
+</body>
+</html>
