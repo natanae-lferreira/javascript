@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body {
+    background: rgb(70, 142, 236);
+    font: normal 40px arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+header > h1 {
+    font: normal bolder 'Arial' sans-serif;
+    margin: 0;
+}
+
+section {
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.356);
+    text-align: justify;
+}
+
+div > img {
+    display: block;
+    margin: auto;
+}
+
+p#hora {
+    font: normal bolder Coorier New;
+    text-align: center;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+}

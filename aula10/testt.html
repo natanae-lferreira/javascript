@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEst</title>
+</head>
+<body>
+    <p>Qual o seu nome?</p>
+    <input type="text" name="Nome" id="n">
+    <input type="button" value="OK" onclick="nome()">
+    <div id="r">
+        resultado
+    </div>
+    <script>
+        function nome() {
+            var nata = document.getElementById('n').value
+            var r = document.getElementById('r')
+            r.innerHTML = `seja bem vindo ao site <strong>${nata}</strong>`
+        }
+    </script>
+</body>
+</html>
